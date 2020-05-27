@@ -1,3 +1,7 @@
+/*
+This function creates LogE numbers like 2.5E+15 into normal number string like: 2500000000000000
+*/
+
 function logEtoLongNumber($amountInLogE){
     
   $amountInLogE = (string)$amountInLogE;
