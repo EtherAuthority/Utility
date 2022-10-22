@@ -86,6 +86,10 @@ function logEtoLongNumber(amountInLogE){
     }
     return noDecimalDigits;
   }
+  else if(amountInLogE.includes(".")){
+        var splitString = amountInLogE.split("."); //split the string from '.'
+        return splitString[0];
+     }
   return amountInLogE;  //by default it returns stringify value of original number if its not logarithm number
 }
 
