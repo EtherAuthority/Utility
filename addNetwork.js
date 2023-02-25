@@ -1,4 +1,4 @@
-
+//add network code
 var button = document.getElementById("addNetwork");
 button.addEventListener("click",function(e){
      if(window.ethereum) {
@@ -20,4 +20,12 @@ button.addEventListener("click",function(e){
       }
 },false);
 
-    
+//change network code
+          try {
+                    await ethereum.request({
+                    method: 'wallet_switchEthereumChain',
+                    params: [{ chainId: '0x22' }],
+                    });
+           } catch (switchError) {
+                console.log(switchError);
+           }
